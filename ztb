@@ -1,0 +1,63 @@
+Q(1): Would you like to draft a 93A demand letter? 
+A: Yes.
+	Q(1.1): What is your full name?
+	X:myname
+		DOC(1.1.1):Dear <x>DefendantOwnerPresidentName</x>,<br><br>
+
+		Q(1.1.1): What is your address?
+		X:StreetLine1
+			Q(1.1.1.1): City
+			X:City
+				Q(1.1.1.1.1): State
+				X:State
+					Q(1.1.1.1.1.1): Zip
+					X:Zip
+						Q(1.1.1.1.1.1.1): Your phone number?
+						X:PlaintiffPhoneNumber
+							Q(1.1.1.1.1.1.1.1): Who is the president or owner of the defendant business?
+							X:DefendantOwnerPresidentName
+								Q(1.1.1.1.1.1.1.1.1):What is their title?
+								X:DefendantOwnerPresidentTitle
+									Q(1.1.1.1.1.1.1.1.1.1): What is the name of the business?
+									X:DefendantBusinessName
+										Q(1.1.1.1.1.1.1.1.1.1.1): Defendants street address line 1:
+										X:DefendantStreetLine1
+											Q(1.1.1.1.1.1.1.1.1.1.1.1):Defendant street address line 2:
+											X:DefendantStreetLine2
+												Q(1.1.1.1.1.1.1.1.1.1.1.1.1):City?
+												X:DefendantCity
+													Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1):State?
+													X:DefendantState
+														Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):Zip?
+														X:DefendantZip
+															Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):Town?
+															X:DefendantTown
+																Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1): Now let's talk about the actual event in question.  Describe the events as they occurred, including the conduct and time they happened. You may have more than one paragraph here, if you believe that there was more than one unfair or deceptive act that occurred at one time, or if there were multiple times that you were subjected to unfair or deceptive acts or practices.
+																X:UFDAPDescription
+																	Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):What was the specific date (mm/dd/yyyy) of the event?
+																	X:UFDAPDate
+																		Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):If you are aware of the violation of a specific law or regulation, please indicate it here:
+																		X:UFDAPApplicableStatuteText
+																			Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):What is the amount of the loss that you suffered?
+																			X:UFDAPLossAmount
+																				Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):Describe why you have been injured in this amount; if you have given the business an opportunity to fix poor repairs, for example, and they have not done so, put that information here.
+																				X:UFDAPAmountDescription
+																					Q(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1):GOTO:2
+A: No.
+	Q(1.2): That's cool. Have a good day.
+
+Q(2): Great! You are ready to produce a draft of your demand letter. Please review the draft carefully and make any needed corrections for substance and or formatting.  
+A:Yes
+	DOC(2.1):	I am writing to you under the provisions of Massachusetts General Laws, Chapter 93A, Section 9, the Consumer Protection Act. I am writing to request relief as outlined in that statute. <br><br>
+On or about <x>UFDAPDate</x>, the following unfair or deceptive act(s) or practice(s) occurred: <x>UFDAPDescription</x> <br><br>
+I believe that the(se) acts or practices are declared unlawful by Section 2 of Chapter 93A, which declares unfair methods of competition and unfair or deceptive acts or practices in the conduct of any trade or commerce unlawful.  I believe the conduct is a violation of <x>UFDAPApplicableStatuteText</x>, which provides:  <x>UFDAPApplicableStatuteText</x>. <br><br>
+I have suffered injury or loss of money or property in the amount of: <x>UFDAPLossAmount</x>, As a result of the following circumstance: <x>UFDAPAmountDescription</x>.<br><br>
+This letter serves as my request for the following relief: <x>UFDAPLossAmount</x>. Under the provisions of Section 9 Chapter 93A, I am providing you with the opportunity to make a written offer of settlement of this claim within 30 days. If you fail to make a good faith offer of settlement in response to this request, and I institute legal action, a court may award me double or triple damages, attorney’s fees and costs if the court finds in my favor. <br><br>
+I may be reached at the address written above, or at <x>PlaintiffPhoneNumber</x> during normal business hours. I look forward to hearing from you.
+
+<br><br> 
+			Sincerely,<br>
+			<x>myname</x> 
+	Q(2.1):Alright, are you ready to see your letter?
+	A[javascript:submit2('http://www.davidcolarusso.com/QnA/doc/parse/html/','POST','t','Proof read your letter. Print it out, and mail it to: Santa Clause, North Pole')]: Yes.
+		Q(2.1.1): Thank you.
